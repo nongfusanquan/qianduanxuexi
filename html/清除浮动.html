@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--父亲无高度，有浮动就得清除浮动 自适应  清除浮动因为，子元素有浮动，父亲无高度引起塌陷
+     1.额外标签法，在浮动盒子后面加一个空div
+     2.父亲添加 overHidden:flow
+     3.after 伪元素
+     4.使用before 和after双伪元素  小米网站用的比较多
+    -->
+    <style>
+        .clear{/*额外标签法*/
+            clear: both;
+        }
+        .father{
+            border: 1px aqua solid;
+           /* overflow: hidden;*/
+        }
+        .damao{
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite;
+            float: left;
+        }
+        .ermao{
+            width: 100px;
+            height: 100px;
+            background-color: beige;
+            float: left;
+        }
+        .xiaomi{
+            width: 100px;
+            height: 120px;
+            background-color: cyan;
+        }
+        .clearfix:after{/*after 伪元素*/
+            display: block;/*转换为快元素*/
+            content: ".";/*防止旧浏览器不兼容*/
+            height: 0px;
+            visibility: hidden;
+            clear: both;
+        }
+        .clearfix{
+            *zoom: 1;/*只有ie6 ,7才执行  ie67通过zoom清除浮动*/
+        }
+        /*双伪元素清除浮动*/
+        .clearfix:before, .clearfix:after{
+            content: "";
+            display: table;
+        }
+        .clearfix:after{
+            clear: both;
+        }
+        .clearfix{
+            *zoom: 1;/*只有ie6 ,7才执行  ie67通过zoom清除浮动*/
+        }
+    </style>
+</head>
+<body>
+<div class="father clearfix">
+    <div class="damao"></div>
+    <div class="ermao"></div>
+<!--    <div class="clear"></div>-->
+</div>
+<div class="xiaomi">
+
+</div>
+</body>
+</html>

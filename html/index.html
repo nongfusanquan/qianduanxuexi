@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*盒子 大盒子盒子   先确定盒子  先写内容 再调边距 颜色   河内 延边 */
+        /*
+            盒子就是 div 嵌套 ul啥的
+            内容就是写字
+            颜色 背景，字，
+            边距，高度宽度，margin pading  a啥的转成display 块状元素
+
+           第一步最重要：
+           确定用啥：每一个列的小模块用div  获得到宽高
+          多列表能点击   li  a
+            图文能点击  a 里面写img
+            input      a转块内元素设高度
+
+             一个盒子指定宽高，加padding会撑开盒子
+        */
+        /*css初始化*/
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .clearfix:before, .clearfix:after {
+            display: table;
+            content: "";
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1; /*只有ie6 ,7才执行  ie67通过zoom清除浮动*/
+        }
+
+        a {
+            color: #050505;
+            text-decoration: none;
+        }
+
+        body {
+            color: #f3f5f7;
+        }
+
+        input {
+            border: 0;
+            box-sizing: border-box; /*css盒子模型 border和padding包含到width里面*/
+        }
+
+        .container {
+            width: 1200px; /*因为我们的版心都是1200px 都要居中对齐 声明一个公共的 类选择器*/
+            margin: 0 auto;
+        }
+
+        /*初始化结束*/
+
+        /*页面头部分*/
+        header {
+            height: 100px;
+            /* background-color: pink;*/
+            overflow: hidden; /* 嵌套的盒字margin合并消除影响 */
+        }
+
+        nav {
+            width: 1366px; /*宽度暂且定为1366*/
+            height: 42px;
+
+            margin: 26px auto; /*嵌套的子盒子margin合并*/
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .navbar {
+            float: left;
+            height: 42px;
+            line-height: 42px; /*行高会继承，给父亲写了就不用给li,a写了,儿子孙子就不用写了 line-height==height 块元素就可以垂直居中*/
+            margin-left: 50px;
+        }
+
+        .navbar li {
+            float: left; /*让li内容浮动起来*/
+        }
+
+        .navbar li a {
+            height: 42px;
+            padding: 0px 8px;
+
+            display: block; /*a是行内元素 ，给高需要转换为块元素*/
+        }
+
+        .navbar li a:hover {
+            border-bottom: 2px solid #00a4ff;
+        }
+
+        /*搜索框*/
+        .search {
+            width: 410px;
+            height: 38px;
+            border: 1px solid #00a4ff;
+            float: right;
+
+        }
+
+        .search input[type=text] {
+            width: 360px;
+            height: 38px;
+            padding-left: 20px;
+            float: left; /*文本框属于行内元素，行内元素之间并排显示，中间有空隙，所以添加浮动*/ /*input img都是行内块元素，并排的时候会有缝隙，加一个浮动就好了*/
+        }
+
+        .search input[type=submit] {
+            width: 50px;
+            height: 38px;
+            float: left;
+            background: url("images/search_right_03.png") #00a4ff no-repeat center center;
+        }
+
+        /*个人中心部分*/
+        .personal {
+            float: right;
+            height: 42px;
+            line-height: 42px; /* 这个行高给父亲， 行高会继承 */
+            margin: 0 100px 0 35px; /* 上0 右 15  下0 左  35 */
+        }
+
+        .personal img {
+            margin: 0 8px;
+            vertical-align: middle; /*用来控制图片/表单与文字的对齐*/
+        }
+
+        /*页面头部结束*/
+        /*banner 开始*/
+        .banner {
+            height: 420px;
+            background-color: #1c036c;
+        }
+
+        .bannerin {
+            height: 420px;
+            background: url("images/banner2.png") no-repeat;
+        }
+
+        .slidebar {
+            height: 420px;
+            width: 190px;
+            background: rgba(0, 0, 0, 0.3);
+            float: left;
+        }
+
+        .slidebar li a {
+            color: #FFF;
+            font-size: 14px;
+            padding: 0 20px;
+            display: block;
+            height: 45px;
+            line-height: 45px; /*单行垂直居中，有了行高就不用写高的了*/
+        }
+
+        .slidebar li a span {
+            float: right;
+            font-family: Arial;
+        }
+
+        .slidebar li a:hover {
+            color: #00a4ff;
+        }
+
+        .timetable {
+            width: 230px;
+            height: 300px;
+            float: right;
+            background-color: #fff;
+            margin-top: 50px;
+        }
+
+        .timetable dt {
+            height: 50px;
+            background-color: #9bceea;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+            letter-spacing: 2px; /*设置字间距*/
+            margin-bottom: 2px;
+        }
+
+        .timetable dd {
+            width: 193px;
+            height: 60px;
+            margin: 0 auto;
+            border-bottom: 1px solid #CCC;
+            padding-top: 14px;
+            box-sizing: border-box; /* 一个盒子指定宽高，加padding会撑开盒子*/
+        }
+
+        .timetable dd:last-child {
+            border-bottom: 0;
+        }
+
+        .timetable dd h4 {
+            font-size: 16px;
+            font-weight: normal;
+            color: #666666;
+        }
+
+        .timetable dd p {
+            font-size: 14px;
+            font-weight: normal;
+            color: #e7e7e7;
+        }
+
+        .timetable dd a {
+            height: 38px;
+            border: 1px solid #00a4ff;;
+            display: block;
+            text-align: center;
+            line-height: 38px;
+        }
+
+        /*精品推荐*/
+        .recommend {
+            height: 60px;
+            line-height: 60px;
+            margin: 10px auto;
+            background-color: #FFF;
+            box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+        }
+        .recommend a{
+            padding: 0 30px;/*上下0 左右30px 因为内容不固定所以用padding */
+            border-right: 1px solid #ccc;
+        }
+        .recommend a:first-child{
+            color: #00a4ff;
+        }
+        .recommend a:last-child{
+            color: #00a4ff;
+            border: 0;
+            float: right;
+        }
+        .recommend a:hover{
+            color: #00a4ff;
+        }
+    </style>
+</head>
+<body>
+<!--头部部分-->
+<header>
+    <nav>
+        <div class="logo">
+            <img src="images/logo_03.png" height="42" width="210"/>
+        </div>
+        <!--导航栏 默认用ul li +a    .navbar>ul>li*3>a-->
+        <div class="navbar">
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><a href="">课程</a></li>
+                <li><a href="">职业规划</a></li>
+            </ul>
+        </div>
+
+        <!-- 个人中心部分 -->
+        <div class="personal">
+            <a href="#">个人中心<img src="images/tixing.png" alt=""></a>
+            <a href="#"><img src="images/head_rigth.png"> 刘德华</a>
+        </div>
+        <!--搜索框部分-->
+        <div class="search">
+            <form action="">
+                <input type="text" placeholder="请输入关键字">
+                <input type="submit" value="">
+            </form>
+        </div>
+    </nav>
+</header>
+<!--头部部分结束-->
+<div class="banner">
+    <div class="bannerin container">
+        <!--左侧导航栏-->
+        <div class="slidebar"><!--ul>li*6>a-->
+            <ul>
+                <li><a href="">前端开发<span> ></span></a></li>
+                <li><a href="">前端开发<span> ></span></a></li>
+                <li><a href="">前端开发<span> ></span></a></li>
+                <li><a href="">前端开发<span> ></span></a></li>
+                <li><a href="">前端开发<span> ></span></a></li>
+                <li><a href="">前端开发<span> ></span></a></li>
+                <li><a href="">前端开发<span> ></span></a></li>
+                <li><a href="">前端开发<span> ></span></a></li>
+                <li><a href="">前端开发<span> ></span></a></li>
+            </ul>
+        </div>
+        <!--小课表    dl>dt*1+dd*4-->
+        <dl class="timetable">
+            <dt>我的课程表</dt>
+            <dd>
+                <h4>继续学习 程序语言设计</h4>
+                <p>正在学习-使用对象</p>
+            </dd>
+            <dd>
+                <h4>继续学习 程序语言设计</h4>
+                <p>正在学习-使用对象</p>
+            </dd>
+            <dd>
+                <h4>继续学习 程序语言设计</h4>
+                <p>正在学习-使用对象</p>
+            </dd>
+            <dd>
+                <a>全部课程</a>
+            </dd>
+        </dl>
+    </div>
+</div>
+<!--精品推荐-->
+<div class="recommend container">
+    <a href="">精品推荐</a>
+    <a href="">精品推荐</a>
+    <a href="">精品推荐</a>
+    <a href="">精品推荐</a>
+    <a href="">精品推荐</a>
+    <a href="">精品推荐</a>
+    <a href="">精品推荐</a>
+    <a href="">修改兴趣</a>
+</div>
+</body>
+</html>
