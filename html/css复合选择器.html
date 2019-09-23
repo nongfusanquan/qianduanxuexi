@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css复合选择器</title>
+    <style>
+        /*标签.类 交集选择器*/
+        /* div.div1{
+             color: red;
+         }*/
+        /*并集选择器, 用逗号隔开*/
+        /* p, div, h1,em.yao {
+             color: green;
+         }*/
+        /*后代选择器 空格隔开*/
+        /* div.nav ul li{
+             color: red;
+         }*/
+        /*子元素选择器 子指的是亲儿子，孙子重孙子不算*/
+        .item > li { /*li 是item 亲儿子*/
+            color: red;
+        }
+        h1 > strong {color:red;}
+    </style>
+</head>
+<body>
+<div class="div1">1</div>
+<div>2</div>
+<div>3</div>
+<p>香蕉</p>
+<p>橘子</p>
+<div>白菜</div>
+<div>辣椒</div>
+<h1>馒头</h1>
+<h1>米饭</h1>
+<em class="yao">我也变色</em><em>我也变色</em><em>我也变色</em>
+
+<div class="nav">
+    <ul>
+        <li>首页</li>
+        <li>导航</li>
+        <li>联系</li>
+    </ul>
+</div>
+<div>
+    <ul class="item">
+        <li>百度
+            <ul>
+                <li>百度贴吧</li>
+                <li>百度知道</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<h1>This is <strong>very</strong> <strong>very</strong> important.</h1>
+
+</body>
+</html>

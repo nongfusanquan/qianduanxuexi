@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /**/
+        input{
+            border: 0;/**/
+        }
+        div {
+            width: 220px;
+            height: 200px;
+         /* border-radius: 50%;*//*取宽度和高度的一半会变成一个圆 50%*/
+          /*  border-radius: 5px 10px; 左上右下5px  */
+            /*   border-width: 20px;
+               border-color: #f724ff;
+               border-style: ridge;*//*边框样式 solid  dashed虚线  dotted点线*/
+            border: 1px solid blue;
+           padding: 10px 5px;/*内容与盒子的距离*/
+            /*margin: 100px 20px;*/
+            margin: 30px auto;/*上下距离30px   块级元素加宽度才行带有宽度的盒子水平居中对齐*/
+        }
+
+        .user {
+          /*  border-width: 2px;
+            border-color: #f724ff;
+            border-style: solid;*/
+            border: 1px solid blue;
+            border-radius: 5px 10px 10px 5px;/*圆角*/
+        }
+
+        .nc {
+            border-top-width: 2px;
+            border-top-color: #f724ff;
+            border-top-style: solid;
+        }
+        .email{
+            border-top: 1px solid red;
+            border-bottom: 1px dashed orange;
+        }
+        table{
+            width: 700px;
+            height: 300px;
+            border: 1px solid red;
+            border-collapse: collapse;/*合并边框*/
+        }
+        td{
+            border: 1px solid red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+ <div>
+     我是一个盒子
+ </div>
+用户名:<input type="text" class="user"><br>
+昵称:<input type="text" class="nc"><br>
+email:<input type="text" class="email"><br>
+<h1></h1>
+
+<table>
+    <tr>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+    </tr>
+    <tr>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+        <td>123</td>
+    </tr>
+</table>
+
+</body>
+</html>

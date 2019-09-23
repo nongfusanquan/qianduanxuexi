@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+    <style>
+        /*id选择器是只用于1个元素，类选择器可用于好多个*/
+        p {
+            color: red;
+            font-size: 14px;
+        }
+
+        h1 {
+            color: brown;
+        }
+        .mingren{
+            color: brown;
+        }
+        .wukonh{/*类选择器*/
+            color: beige;
+        }
+        .c-orange{/*命名，见名知意*/
+            color: coral;
+        }
+        .blue{
+            color: blue;
+        }
+        .fontsize{
+            font-size: 25px;
+        }
+        #fontbig{/*id选择器*/
+            font-size: large;
+        }
+       /* *{                 !**只所有的标签 通配符选择器*几乎不用!
+            color: aqua;
+        }*/
+     /*   a:link{!*链接伪类选择器 顺序别颠倒lvha  love hate  lv ha (好) *!
+            font-size: larger;
+            color: gray;
+            font-weight: bold;
+        }
+        a:visited{!*已访问的链接*!
+            font-size: larger;
+            color: orange;
+            font-weight: bold;
+        }
+        a:hover{!*鼠标移动*!
+            font-size: larger;
+            color: red;
+            font-weight: bold;
+        }
+        a:active{!*点击不松鼠标*!
+            font-size: larger;
+            color: green;
+            font-weight: bold;
+        }*/
+        /*链接伪类选择器常用写法*/
+        a{
+            font-weight: bold;
+            font-size: 14px;
+            color: gray;
+        }
+        a:hover{
+            font-size: larger;
+            color: red;
+            font-weight: bold;
+        }
+        /*常用写法*/
+        /*结构伪类选择器*/
+       /* li:first-child{
+            color: pink;
+        }
+        li:last-child{
+            color: red;
+        }
+        li:nth-child(4){!*选择第四个*!
+            color: skyblue;
+        }*/
+      /*  li:nth-child(even){!*even是偶数  odd奇数*!
+            color: red;
+        }
+        li:nth-child(odd){
+            color: green;
+        }*/
+        /*li:nth-child(3n){!*n所有 2n相乘*!
+            color: green;
+        }*/
+        li:nth-last-child(even){/*从后向前数*/
+            color: skyblue;
+        }
+        /*结构伪类选择器*/
+        /*目标伪类选择器*/
+            :target{
+                color: brown;
+            }
+        /*目标伪类选择器*/
+    </style>
+</head>
+<body>
+<a href="#miaoshu">跳转</a><br>
+<a href="#miaoshu2">跳转2</a><br>
+<p>
+    ffffffffff段落
+</p>
+<p>
+    ffffffffff段落
+</p>
+<p>
+    ffffffffff段落
+</p>
+<h1>我是h1</h1>
+<h1>我是h1</h1>
+<h1>我是h1</h1>
+<div class="mingren">名人</div>
+<div class="wukonh">悟空</div>
+<div class="blue fontsize">八戒</div><!--多类名选择器-->
+
+<div id="fontbig">熊大</div>
+<div >熊二</div>
+
+<p>p1</p>
+<p>p2</p>
+<h1>h1</h1>
+<h1>h1</h1>
+
+<div><a href="">秒杀</a></div>
+
+<ul>
+    <li>一个</li>
+    <li>2个</li>
+    <li>3个</li>
+    <li>4个</li>
+    <li>5个</li>
+    <li>6个</li>
+    <li>7个</li>
+    <li>8个</li>
+</ul>
+<p id="miaoshu">我是谁</p>
+<p id="miaoshu2">我是谁2</p>
+</body>
+</html>

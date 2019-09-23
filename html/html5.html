@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p {
+            /*这是注释*/
+         /*   color: #ff5427;
+            font-size: 24px;
+            font-family: "华文宋体";
+            font-weight: 900;
+            font-style: italic;*/
+            font: 14px "微软雅黑";/*倾斜 加粗  大小 字体 后两个不能省略*/
+        }
+
+        strong {
+            font-weight: normal;
+        }
+
+        em {
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+<header>定义页面的头部</header>
+<nav>定义导航栏</nav>
+<footer>页面底部</footer>
+<article>定义文章</article>
+<section>块</section>
+<aside>侧边</aside>
+
+<input list="cars"/>
+<datalist id="cars">
+    <option value="BMW">
+    <option value="Ford">
+    <option value="Ford2">
+    <option value="Volvo">
+</datalist>
+
+<fieldset>
+    <legend>健康信息</legend>
+    身高：<input type="text" placeholder="哈哈哈"/><br>
+    上传头像:<input type="file" multiple><br>
+    体重：<input type="text" required accesskey="s"/><br>
+    年月日：<input type="date"><br>
+    颜色：<input type="color"><br>
+    <h4>自动记录完成</h4>
+    <form action="">
+        体重：<input type="text" autocomplete="on" name="username"/><br>
+        <input type="submit" value="提交"/>
+    </form>
+</fieldset>
+<p>企业信息</p>
+<strong>这是加粗的</strong><br>
+<em>倾斜的</em>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>权重精华题</title>
+    <style>
+        /*
+         类选择器比不上id选择器
+        */
+        #father #son{  /* 0100  叠加 0200*/
+            color: blue;
+        }
+        #father p.c2{/*0100  0010*/
+            color: black;
+        }
+        div.c1 p.c2{  /*0001*/
+            color: red;
+        }
+        #father{
+            color: green !important;/*给 father的，继承的权重为0000*/
+        }
+    </style>
+</head>
+<body>
+<div id="father" class="c1">
+    <p id="son" class="c2">
+        试问这行字体是什么颜色？
+    </p>
+</div>
+</body>
+</html>

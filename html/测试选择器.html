@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试选择器</title>
+    <style>
+        .site-r a {
+            color: red;
+        }
+
+        .nav ul li a {
+            color: green;
+        }
+
+        .nav, .sitenav {
+            font-size: 14px;
+            font-family: "华文新魏";
+        }
+
+        .nav > ul > li > a {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+<!--主导航栏-->
+<div class="nav">
+    <ul>
+        <li><a href="#">公司邮箱</a></li>
+        <li><a href="#">公司简介</a></li>
+        <li><a href="#">公司产品</a></li>
+        <li>
+            <a href="#">联系我们</a>
+            <ul>
+                <li><a href="#">公司邮箱</a></li>
+                <li><a href="#">公司电话</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<!--侧导航栏-->
+<div class="sitenav">
+    <div class="site-1">左侧导航栏</div>
+    <div class="site-r"><a href="#">登录</a></div>
+</div>
+</body>
+</html>

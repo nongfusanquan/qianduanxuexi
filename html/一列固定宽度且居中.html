@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .top,          /*并列选择器*/
+        .banner,
+        .main,
+        .footer {
+            width: 960px;
+            margin: 0px auto; /*上下 左右*/
+            margin-bottom: 10px;
+            text-align: center;
+            border-bottom: 2px dashed peachpuff;
+        }
+
+        .top {
+            height: 80px;
+            background-color: pink;
+
+        }
+
+        .banner {
+            height: 120px;
+            background-color: purple;
+        }
+
+        .main {
+            height: 400px;
+            background-color: blue;
+        }
+
+        .footer {
+            height: 80px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+<!--.top+.banner+.main+.footer-->
+<div class="top">top</div>
+<div class="banner">banner</div>
+<div class="main">main</div>
+<div class="footer">footer</div>
+</body>
+</html>

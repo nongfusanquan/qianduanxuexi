@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>块级元素</title>
+    <!--
+         内联元素内部不要放块级元素
+         块级元素 p里面不要包含div块级元素了
+    -->
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            display: inline;/*把块级元素改为内联元素*/
+        }
+        span{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+        input{/*行内块元素 可以一行几个也可以设置宽高*/
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<span>4</span>
+<span>4</span>
+<span>4</span>
+
+<input type="text" ><input type="text" ><input type="text" >
+
+<a >lianjie</a>
+</body>
+</html>

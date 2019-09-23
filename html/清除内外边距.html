@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*外边距合并
+         会以大的为准，margin
+
+        解决外边距塌陷
+         1.给大盒子加边框,2或者加padding 3:overflow: hidden;
+        */
+
+       /* body,ul,li{!*清除浏览器 逗号是并列 空格是后代*!
+            margin: 0px;
+            padding: 0px;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            background-color: purple;
+        }
+        ul{
+            background-color: red;
+        }
+        span{!*行内元素只有左右外边距，没有上下  尽量只给左右，不给上下*!
+            margin: 30px 50px;
+            border: 1px solid red;
+        }*/
+
+        .father{
+            width: 300px;
+            height: 300px;
+        /*  border: 1px solid red;*/
+            background-color: red;
+           /* padding: 1px;*/
+            overflow: hidden;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+           /*border: 1px solid purple;*/
+            background-color: purple;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+<!--<div>
+
+</div>
+<ul>
+    <li>1</li>
+</ul>-->
+<!--zhushidddddddddddddddddddddddddddddddddddddddddddddddddddddddddd-->
+<div class="father">
+    <div class="son"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+    <style>
+         a[title]{
+             color: red;
+         }
+        input[type=text]{
+            color: orange;
+        }
+      /*  div[class=font]{
+             color: #a51319;
+        }*/
+         div[class^=font]{/*以font开头的  $font 以XX结尾的 */
+             color: #a51319;
+         }
+         div[class*=t]{/*t在任意位置都可以*/
+             color: #a51319;
+         }
+    </style>
+</head>
+<body>
+<a href="#" title="我是新浪">新浪</a>
+<a href="#" title="我是百度">百度</a>
+<a href="#">网易</a>
+<input type="text" placeholder="文本框">
+<input type="submit" value="提交">
+<div class="font2">shuxing1</div>
+<div class="font">shuxing1</div>
+
+<div class="jing-t-dong">shuxing1</div>
+<div class="jing-t-tdong">shuxing1</div>
+</body>
+</html>

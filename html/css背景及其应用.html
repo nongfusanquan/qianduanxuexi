@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*      div {
+
+                  width: 400px;
+                  height: 400px;
+                  background-color: rgba(0, 0, 0, 0.3); !*背景半透明*!
+                !*  background-image: url("images/banner001.png");*!
+
+                 !* background-repeat: no-repeat; *!!*背景平铺*!
+                  !*利用方位名次改变背景图片位置*!
+                  !* background-position: center;*!
+                  !*   background-position: 10px 30px;*!!*第一个是x 坐标，第二个是Y坐标*!
+                  !*background-position: 10px center ;*!
+                  background-position: center -10px;
+                  background-size: contain;!*尽量只改一个值  50%缩放为以前的大小的一半 cover铺满  contain 保证图片完整*!
+                  background: url("images/banner001.png") no-repeat left top,red url("images/ic_delete2.png") no-repeat right bottom ;!*多张图*!
+
+              }*/
+
+        /* body {
+             background-image: url("images/banner001.png");
+             background-repeat: no-repeat;
+             background-attachment: fixed; !*附着*!
+         }*/
+        /*  body{
+              background: #FFF url("images/banner001.png") no-repeat fixed  100px;!*合着写*!
+          }*/
+        body {
+            background-color: #ccc;
+        }
+
+        .tuqi {
+            color: #ccc;
+            font-size: 70px;
+            text-shadow: 1px 1px 1px #000,-1px -1px 1px #FFF;/*水平距离 垂直距离 模糊距离 模糊颜色*/
+
+        }
+
+        .aoxia {
+            color: #ccc;
+            font-size: 70px;
+            text-shadow: -1px -1px 1px #000,1px 1px 1px #FFF;/*水平距离 垂直距离 模糊距离 模糊颜色*/
+        }
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+<div class="tuqi">我是凸起的文字</div>
+<div class="aoxia">我是凹下的文字</div>
+</body>
+</html>

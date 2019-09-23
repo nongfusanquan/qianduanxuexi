@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素选择器</title>
+    <style>
+        /*
+          .demo  类选择器
+          ：first-child 伪类选择器
+          ::first-letter 伪元素选择器
+        */
+        p::first-letter{
+            color: red;
+          font-size: larger;
+        }
+        p::first-line{
+            color: #f724ff;
+        }
+        p::selection{/*选中的颜色*/
+            color: pink;
+        }
+        div::before{
+            content: "dd";
+        }
+        p::after{
+            content: "sile";
+        }
+    </style>
+</head>
+<body>
+<h1>freestyle</h1>
+<p>英语词汇，"你们有freestyle"在我们伤心的时候，是谁坐在我们的身旁，耐心的听我们诉说我们的那份苦恼，是谁在我们经受了挫折以后，还是一股脑的给我们鼓励和自信，是父母，一切都是父母给的，父母就像保护神一样保护着我们、爱护着我们、帮助着我们。，所以我们要感恩父母。
+
+    记得很小的时候，我到楼下去玩，一不小心让碎玻璃割伤了腿，疼得我“哇哇”大哭。爸爸问讯赶来，把我背到了医院，仔仔细细地为我清理伤口《爸爸是医生》、缝合、包扎，妈妈则在一旁流眼泪，一副胆战心惊的样子。我的腿慢慢好了，爸爸妈妈的脸上，才渐渐有了笑容。 一天下午，
+</p>
+
+<div>
+    几年
+</div>
+</body>
+</html>
