@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+          背景大图包含好多小图，一次都请求下来
+        */
+        .qizhi {
+            width: 30px;
+            height: 30px;
+            background: url("images/jingling.png") 0px -182px no-repeat;
+        }
+
+        .nzimu {
+            width: 20px;
+            height: 17px;
+            background: url("images/jingling.png") -139px -70px no-repeat;
+        }
+
+        span {
+            background: url("images/zimu.png") no-repeat;
+            float: left; /*写了这个就不用写 display: block;*/
+
+        }
+
+        span:first-child {
+            width: 89px;
+            height: 80px;
+            background-position-x: -396px;
+            background-position-y: -72px;
+        }
+        span:nth-child(2){
+            width: 76px;
+            height: 81px;
+            background-position-x: -216px;
+            background-position-y: -364px;
+        }
+        span:nth-child(3){
+            width: 69px;
+            height: 81px;
+            background-position-x: -219px;
+            background-position-y: -216px;
+        }
+        span:nth-child(4){
+            width: 80px;
+            height: 84px;
+            background-position-x: -399px;
+            background-position-y: -654px;
+        }
+    </style>
+</head>
+<body>
+<!--<div class="qizhi"></div>
+<div class="nzimu"></div>-->
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var a = 's';
+        console.log(isNaN(a));/*是否是一个数字*/
+        var s = '黑马程序员';
+        /*我很喜欢“黑马程序员”*/
+        var s2 = '我喜欢\"黑马\n程\t序员\"';/*转义 */
+        console.log(s2);
+        var s3 = '\\abc\\';
+        console.log(typeof s3);
+        console.log('male' + true);
+
+        //数据类型转换
+        //转换成字符串 1.通过toString(),null，undefined 没有toString（）方法,toString 用的更多
+        //2.String  3.用加号
+        var num = 19;
+        console.log(num.toString());
+        console.log(String(num));
+        //转换成数字类型 1.NUmber 2.parseInt 3.parseFloat
+        var snum = "123abd";
+        var flag = true;
+        console.log(Number(snum));
+        console.log(parseInt(flag));
+        var snum2=12.345;
+        console.log(snum2.toFixed(2));
+        console.log(parseFloat(true));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

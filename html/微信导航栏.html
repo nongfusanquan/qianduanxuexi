@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--鼠标放上去换图片 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body {
+            background: url("images/wx.jpg") repeat-x;
+        }
+        .nav{
+            height: 75px;
+
+            margin: 0px auto;
+        }
+       ul{
+           padding-left: 200px;
+          line-height: 75px;
+       }
+
+        ul li{
+            float: left;
+            margin: 0 10px;
+        }
+        ul li a{
+            padding-left: 15px;/*不要写宽 padding变宽*/
+            height: 41px;
+            display: inline-block;
+            line-height: 41px;
+            background: url("images/daohang.png") no-repeat left center;
+        }
+    /*    ul li a:hover{
+            background-image: url("凹下去");
+        }
+        ul li a:hover span{
+            background-image: url("凹下去");
+        }*/
+        ul li a span{
+            height: 41px;
+            display: inline-block;
+            background: url("images/daohang.png") no-repeat right center;/*右对齐*/
+            padding-right: 15px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="nav">
+    <ul>
+        <li><a href=""><span>首页</span></a></li>
+        <li><a href=""><span>首页ww</span></a></li>
+        <li><a href=""><span>首页w</span></a></li>
+        <li><a href=""><span>首页wwwwwwwwww</span></a></li>
+        <li><a href=""><span>首页s</span></a></li>
+        <li><a href=""><span>首页aaaa</span></a></li>
+    </ul>
+</div>
+</body>
+</html>
