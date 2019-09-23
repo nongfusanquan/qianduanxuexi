@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--河内
+       延边
+      内容，一般就是功能 a image ul li
+
+      宽高 用了 行内元素 用高就得转成 block  然后lineheight =height 居中
+    -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .slider{
+            width: 520px;
+            height: 200px;
+            margin: 20px auto;
+            position: relative;
+        }
+        .leftarrow,
+        .rightarrow{
+            width: 24px;
+            height: 36px;
+            position: absolute;
+            display: block;
+            top:50%;/*按照父级的一半*/
+            margin-top: -18px;/*自己高度的一半*/
+        }
+        .leftarrow{
+            left: 0;
+        }
+        .rightarrow{
+            right: 0;
+        }
+        .circle{
+            width: 65px;
+            height: 13px;
+            position: absolute;
+            bottom: 10px;
+           left: 50%;
+            margin-left: -32px;
+          box-sizing: border-box;
+            background: rgba(255,255,255,0.2);/*背景虚化*/
+            border-radius: 6px;/*小圆角*/
+        }
+        .circle li{
+            width: 9px;
+            height: 9px;
+             float: left;/*浮动让快元素横向排列，因为内联元素横向排列会有缝隙*/
+            margin: 2px;
+            background-color: #CCC;
+            border-radius: 50%;/*圆角*/
+        }
+        /*.current{!* 这样写会有权重问题*!
+            background-color: orange;
+        }*/
+        .circle .current{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+ <div class="slider">
+     <img src="images/lunbo1.png" alt="" width="520px" height="200px">
+     <a href="" class="leftarrow"><img src="images/left_arrow.png"></a>
+     <a href="" class="rightarrow"><img src="images/right_arrow.png"></a>
+     <ul class="circle">
+         <li class="current"></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+     </ul>
+ </div>
+</body>
+</html>

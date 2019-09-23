@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位</title>
+   <style>
+       /*固定定位不占位置
+        不写宽高也不居中
+       */
+       *{
+           margin: 0;
+           padding: 0;
+       }
+       .top{/*固定盒子定位一定要写宽和高，除非有内容撑开不用写*/
+           height: 44px;
+           width: 100%;
+           background: url("images/sinatop.png") no-repeat  top center;/*背景 top center 上部居中 left center 左侧居中*/
+           position: fixed;
+           top: 0;
+           left: 0;
+       }
+       .box{/*有宽度的盒子才能居中*/
+           width: 1200px;
+           margin: 44px auto;
+       }
+       .ad,
+       .right{
+         position: fixed;
+         margin-top: 20px;
+       }
+       .ad{
+           left: 20px;
+       }
+       .right{
+           right: 20px;
+       }
+   </style>
+</head>
+
+<body>
+
+      <div class="top">
+
+      </div>
+      <div class="ad"><img src="images/ad.png" alt=""></div>
+      <div class="right"><img src="images/ad.png" alt=""></div>
+   <div class="box">
+       <img src="images/04.png" alt="">
+       <img src="images/04.png" alt="">
+
+  </div>
+</body>
+</html>
