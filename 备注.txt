@@ -1,4 +1,12 @@
-git ��ַ
+git ��ַ
+上传的时候 记得删除，idea
+
+git init
+
+git  add ./
+git commit -m "注释"
+git push "url" master
+git pull "url" master
 
 SSH    git@github.com:nongfusanquan/qianduanxuexi.git
 https  https://github.com/nongfusanquan/qianduanxuexi.git
