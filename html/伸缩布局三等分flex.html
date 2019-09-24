@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        section {
+            width: 80%;
+            height: 600px;
+            margin: 0 auto;
+            border: 1px pink solid;
+            display: flex; /*伸缩布局*/
+            /*   min-width: 800px;!*最小宽度*!
+               max-width: 1200px;!*最大宽度*!*/
+            flex-direction: row; /*row是行 column 是列 row-reverse还能翻转*/
+           justify-content: center; /*水平对齐flex-end 从右开始排 center  space-between*/
+            /* align-items: stretch;*//*单行多盒子 垂直对齐flex-end 底对齐 center居中对齐    stretch子元素不给高 会默认展示父亲的高*/
+            flex-wrap: wrap; /* nowrap 不换行强制一行显示 wrap 换行 wrap-reverse翻转*/
+          /*  flex-flow: row wrap;*/
+            /*align-content: center;*/ /*多行的盒子对齐    flex-flow: row wrap 否则不起作用*/
+
+        }
+
+        section div {
+
+
+        }
+
+        div:nth-child(1) {
+            width: 300px;
+            height: 100px;
+            background-color: #f724ff;
+
+        }
+
+        div:nth-child(2) {
+            width: 400px;
+             height: 100px;
+            background-color: #c1eaff;
+        }
+
+        div:nth-child(3) {
+            width: 400px;
+              height: 100px;
+            background-color: #3b4cff;
+        }
+
+        div:nth-child(4) {
+            width: 400px;
+              height: 100px;
+            background-color: #ffb544;
+            order: -1;
+        }
+
+        div:nth-child(5) {
+            width: 500px;
+              height: 100px;
+            background-color: #7cff7a;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</section>
+</body>
+</html>

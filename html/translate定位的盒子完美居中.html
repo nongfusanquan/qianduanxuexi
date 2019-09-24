@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+         div{
+             width: 200px;
+             height: 200px;
+           /*  transform: translate(100px);*//*50%以自己的宽度为准*/
+            left: 50%;
+             transform: translateX(-50%);
+             position: relative;
+             perspective: 200px;/*眼睛到屏幕的距离,视距越小越明显，近大远小*/
+         }
+        img{
+            margin: 200px;
+            height: 200px;
+            transition: all 0.6s;
+         /*  transform-origin:  left;*//*20px 60px*/
+
+        }
+        img:hover{
+            /*transform: rotate(360deg);*/
+/*            transform: rotateX(360deg);*/
+           /* transform: rotateY(360deg);*/
+           /* transform: rotateZ(360deg);*/
+          transform: translate3d(50%,50%,-100px);/*x，y可以是px ,百分比 z只能是px*/
+        }
+        h2{
+            transition: all 0.6s;
+        }
+         h2:hover{
+
+             transform: translate3d(0px,100px,0px);
+         }
+    </style>
+</head>
+<body>
+   <div>
+       <img src="images/ad.png" alt="">
+   <h2>文字</h2>
+   </div>
+
+
+</body>
+</html>
